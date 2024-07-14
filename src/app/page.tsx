@@ -150,7 +150,7 @@ const Home: React.FC = () => {
                 pageSize: 5,
                 responsive: true,
                 showTotal: (total, range) => {
-                  return `${total} transaction , ${range[0]}-${range[1]} of ${total}`;
+                  return `${total} item , ${range[0]}-${range[1]} of ${total}`;
                 },
               }}
               dataSource={filtered.map((transaction) => ({
@@ -169,7 +169,6 @@ const Home: React.FC = () => {
             </h4>
             <Select
               placeholder="Select a customer"
-              // style={{ width: 200, margin: "20px 0" }}
               className="w-full sm:w-1/2 mt-4 mb-4"
               onChange={handleCustomerChange}
             >
